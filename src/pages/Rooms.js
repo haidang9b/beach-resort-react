@@ -1,10 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Banner from "../components/Banner";
+import Hero from "../components/Hero";
+
 
 const Rooms = () => {
     return (
-        <div>
-            <h1>Rooms page</h1>
-        </div>
+        <Hero hero="roomsHero">
+            <Banner title="Our Rooms" subtitle="">
+                <Link to="/" className="btn-primary">
+                    return home
+                </Link>
+            </Banner>
+        </Hero>
     )
 }
 
