@@ -13,7 +13,9 @@ const FeaturedRooms = () => {
     return (
         <section className="featured-rooms">
             <Title title="featured rooms" />
-            { loading ? <Loading /> :  rooms }
+            <div className="featured-rooms-center">
+                { loading ? <Loading /> :  rooms }
+            </div>
         </section>
     )
 }
