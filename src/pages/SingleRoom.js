@@ -16,7 +16,14 @@ const SingleRoom = () => {
     useEffect(() => {
         setRoom(getRoom(slug));
     }, [loading])
-
+    useEffect(() => {
+        if(room) {
+            document.title = room.name + " | Room";
+        }
+        else {
+            document.title = "Room not found";
+        }
+    }, [room])
     const NotFoundRoom = () => {
         return (
             <div className="error">

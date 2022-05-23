@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import Services from "../components/Services";
 import { Link } from "react-router-dom";
 import FeatureRooms from "../components/FeaturedRooms";
+
 const Home = () => {
+    useEffect(() => {
+        document.title = "Home";
+    },[])
     return (
         <>
             <Hero>
