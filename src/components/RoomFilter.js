@@ -27,6 +27,12 @@ const RoomFilter = () => {
     typeList = typeList.map((item, index) => {
         return <option value={item} key={index}>{item}</option>
     });
+
+    let capacityList = getUnique(rooms, "capacity");
+    capacityList = [...capacityList];
+    capacityList = capacityList.map((item, index) => {
+        return <option value={item} key={index}>{item}</option>
+    });
     console.log(type)
     return (
         <section className='filter-container'>
@@ -37,6 +43,15 @@ const RoomFilter = () => {
                         <label htmlFor='type'>room type</label>
                         <select name='type' id='type' value={type} className='form-control' onChange={handleChange}>
                             {typeList}
+                        </select>
+                    </div>
+                {/* end select type */}
+
+                 {/* capacity */}
+                 <div className='form-group'>
+                        <label htmlFor='capacity'>Guests</label>
+                        <select name='capacity' id='capacity' value={capacity} className='form-control' onChange={handleChange}>
+                            {capacityList}
                         </select>
                     </div>
                 {/* end select type */}
